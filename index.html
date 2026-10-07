@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El conejo de la luna · Manualidades</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
+<style>
+  :root { --fondo: #EFEFEF; --tinta: #222; --suave: #666; --tarjeta: #fff; --titulo: "Bagel Fat One", "Arial Black", Impact, sans-serif; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--fondo); color: var(--tinta); font-family: system-ui, "Segoe UI", Roboto, sans-serif; line-height: 1.5; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  a:focus-visible { outline: 3px solid var(--tinta); outline-offset: 3px; }
+
+  /* Título gigante */
+  .hero { padding: 56px 0 0; }
+  .hero h1 { font-family: var(--titulo); font-weight: 400; text-transform: uppercase; font-size: clamp(3rem, 13vw, 9rem); line-height: .95; margin: 0; overflow-wrap: anywhere; }
+
+  /* Tarjetas que se encima con el título */
+  .productos { position: relative; z-index: 1; margin-top: clamp(-5rem, -7vw, -1.5rem); padding-bottom: 24px; }
+  .grid { display: grid; gap: 20px; grid-template-columns: repeat(4, 1fr); align-items: start; }
+  .tarjeta:nth-child(even) { margin-top: 24px; }
+  .tarjeta { background: var(--tarjeta); border-radius: 6px; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+  .foto { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px; background: #E4E4E4; display: grid; place-items: center; color: var(--suave); font-size: .85rem; }
+  .tarjeta h3 { margin: 0; font-size: .95rem; }
+  .precio { margin: 0; color: var(--suave); font-size: .9rem; }
+  .precio strong { color: var(--tinta); }
+  .pedir { display: block; text-align: center; background: var(--tinta); color: #fff; text-decoration: none; font-size: .85rem; font-weight: 600; padding: 10px 12px; border-radius: 999px; }
+  .pedir:hover { opacity: .85; }
+
+  /* Sobre mí */
+  .sobre { text-align: center; padding: 72px 0 48px; }
+  .sobre h2 { font-family: var(--titulo); font-weight: 400; text-transform: uppercase; font-size: clamp(2rem, 6vw, 3.2rem); margin: 0 0 20px; }
+  .sobre p { max-width: 36ch; margin: 0 auto 28px; font-size: clamp(1.2rem, 3.5vw, 1.7rem); line-height: 1.35; }
+  .sobre .pedir { display: inline-block; padding: 12px 28px; }
+
+  footer { text-align: center; padding: 24px 0 56px; color: var(--suave); font-size: .9rem; }
+  footer a { color: var(--tinta); margin: 0 8px; }
+
+  /* Celular y tablet */
+  @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) {
+    .hero { padding-top: 36px; }
+    .grid { gap: 12px; }
+    .tarjeta { padding: 10px; }
+    .tarjeta:nth-child(even) { margin-top: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero wrap">
+  <h1>El conejo de la luna</h1>
+</header>
+
+<main>
+  <section class="productos wrap" aria-label="Productos">
+    <div class="grid">
+
+      <!-- ===== PRODUCTO (copia y pega este bloque para agregar más) =====
+           1) Foto: sube la imagen a la carpeta img/, borra el <div class="foto"> y quita los <!-- --> de la línea <img>.
+           2) Precio: cambia $000.
+           3) WhatsApp: cambia 529999999999 por tu número (52 + 10 dígitos, sin espacios ni +). -->
+      <article class="tarjeta">
+        <div class="foto">Tu foto aquí</div>
+        <!-- <img class="foto" src="img/cartera1.jpg" alt="Cartera"> -->
+        <h3>Cartera</h3>
+        <p class="precio">Precio: <strong>$000</strong></p>
+        <a class="pedir" href="https://wa.me/529999999999?text=Hola%2C%20quiero%20pedir%20la%20Cartera" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      </article>
+
+      <article class="tarjeta">
+        <div class="foto">Tu foto aquí</div>
+        <h3>Bordado</h3>
+        <p class="precio">Precio: <strong>$000</strong></p>
+        <a class="pedir" href="https://wa.me/529999999999?text=Hola%2C%20quiero%20pedir%20el%20Bordado" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      </article>
+
+      <article class="tarjeta">
+        <div class="foto">Tu foto aquí</div>
+        <h3>Monedero</h3>
+        <p class="precio">Precio: <strong>$000</strong></p>
+        <a class="pedir" href="https://wa.me/529999999999?text=Hola%2C%20quiero%20pedir%20el%20Monedero" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      </article>
+
+      <article class="tarjeta">
+        <div class="foto">Tu foto aquí</div>
+        <h3>Llavero</h3>
+        <p class="precio">Precio: <strong>$000</strong></p>
+        <a class="pedir" href="https://wa.me/529999999999?text=Hola%2C%20quiero%20pedir%20el%20Llavero" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="sobre wrap">
+    <h2>Sobre mí</h2>
+    <!-- CAMBIA: dos o tres líneas de quién eres y qué haces -->
+    <p>Hago carteras y bordados a mano, pieza por pieza. Si quieres algo a tu gusto, escríbeme.</p>
+    <a class="pedir" href="https://wa.me/529999999999?text=Hola%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">Hacer un pedido</a>
+  </section>
+</main>
+
+<footer>
+  <!-- CAMBIA los links por los tuyos -->
+  <a href="https://wa.me/529999999999">WhatsApp</a>
+  <a href="https://www.instagram.com/TU-USUARIO">Instagram</a>
+</footer>
+
+</body>
+</html>
